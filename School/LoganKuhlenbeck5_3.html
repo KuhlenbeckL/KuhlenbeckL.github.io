@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Cards - Screw Threads</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f7f7f7;
+    animation: backgroundFadeIn 1s ease-out forwards;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .question {
+    font-weight: bold;
+  }
+
+  .answer {
+    display: none;
+    color: #333;
+    padding-top: 10px;
+  }
+
+  .card:hover .answer {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 30px 0;
+    animation: fadeInDown 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Screw Threads Review</h1>
+
+<div id="container">
+  <div class="card">
+    <div class="question">1. What geometric shape describes the path of a screw thread?</div>
+    <div class="answer">Helix</div>
+  </div>
+  <div class="card">
+    <div class="question">2. True or False? Threads have one purpose, which is holding parts together.</div>
+    <div class="answer">False</div>
+  </div>
+  <div class="card">
+    <div class="question">3. A thread form that has a 7° slope on one side of the ridge and a 45° slope on the other side is the _____ thread form.</div>
+    <div class="answer">Buttress</div>
+  </div>
+  <div class="card">
+    <div class="question">4. On industrial prints, which is not a way that screw threads usually appear?</div>
+    <div class="answer">True Projection</div>
+  </div>
+  <div class="card">
+    <div class="question">5. True or False? Inch screw are classified by how precise they are made, with 2 being most common, 1 being less precise, and 3 being more precise.</div>
+    <div class="answer">True</div>
+  </div>
+  <div class="card">
+    <div class="question">6. A two-start thread is when there are two ridges that form the screw thread, resulting in a(n) _____ equal to twice the pitch.</div>
+    <div class="answer">Lead</div>
+  </div>
+  <div class="card">
+    <div class="question">7. What term describes threads that are made so that counterclockwise motion advances the thread instead of the normal clockwise motion?</div>
+    <div class="answer">Left-Hand (reverse)</div>
+  </div>
+  <div class="card">
+    <div class="question">8. True or False? Even if the drawing or print uses decimal numbers throughout, fractions can still be used in thread notes because these sizes are still commonly expressed that way.</div>
+    <div class="answer">True</div>
+  </div>
+</div>
+
+</body>
+</html>
