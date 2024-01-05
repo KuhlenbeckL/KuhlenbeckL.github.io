@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Effects</title>
+<style>
+  /* Butterfly Styles */
+  .butterfly-container {
+    position: relative;
+    display: inline-block;
+  }
+  .butterfly-container img {
+    display: block;
+    width: 400px; /* Adjust as needed for your image */
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+  }
+  .butterfly-container:hover img {
+    filter: invert(100%);
+  }
+
+  /* Dinosaur Styles */
+  .dinosaur {
+    transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+  }
+  .dinosaur:hover {
+    filter: saturate(50%);
+  }
+
+  /* Football Field Styles */
+  .border-container {
+    width: 520px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    background: url('tic-tac-toe.png') repeat;
+    padding: 10px; /* Adjust the padding to change the border size */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+  }
+  .border-container:hover {
+    filter: sepia(100%); /* Apply a sepia filter on hover */
+  }
+
+  /* Penguin Styles */
+  .penguin-container {
+    width: 450px; /* Adjust to match the width of your image */
+    height: 300px; /* Adjust to match the height of your image */
+    border-radius: 50%; /* This creates the circle shape */
+    overflow: hidden; /* This property is necessary to hide the parts of the image outside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* This centers the container div in the middle of the page horizontally */
+  }
+  .penguin-container img:hover {
+    filter: grayscale(100%);
+  }
+
+  /* Seagull Styles */
+  .seagull-container {
+    width: 560px;
+    height: 396px;
+    background: transparent; /* Initial background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease; /* Smooth transition for the background */
+  }
+  .seagull-container:hover {
+    background: linear-gradient(to bottom right, #B0C4DE, #87CEEB);
+  }
+
+  /* Theater Stage Styles */
+  .stage-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 48px; /* Adjust the size as needed */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; 
+  }
+  .stage-container img {
+    width: 100%;
+    filter: blur(8px); /* Adjust the blur intensity as needed */
+  }
+  .stage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+
+<!-- Butterfly Image Container -->
+<div class="butterfly-container">
+  <img src="butterfly-original.jpg" alt="Original Butterfly">
+</div>
+
+<!-- Dinosaur Image -->
+<img class="dinosaur" src="dinosaur.png" alt="Cartoon Dinosaur">
+
+<!-- Football Field Container -->
+<div class="border-container">
+  <img src="football_field.jpg" alt="Football Field">
+</div>
+
+<!-- Penguin Container -->
+<div class="penguin-container">
+  <img src="penguins.jpg" alt="Penguins">
+</div>
+
+<!-- Seagull Container -->
+<div class="seagull-container">
+  <img src="seagull.png" alt="Seagull in Flight" />
+</div>
+
+<!-- Theater Stage Container -->
+<div class="stage-container">
+  <img src="theater_stage.jpg" alt="Theater Stage">
+  <div class="stage-text">Presenting</div>
+</div>
+
+</body>
+</html>
